@@ -1,0 +1,3 @@
+Learning C#
+
+Self taught
