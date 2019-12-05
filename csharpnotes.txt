@@ -1,0 +1,224 @@
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Practice
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+        }
+    }
+}
+
+
+
+static void Main(string[] args)
+{
+    Console.WriteLine("Hello, world!");
+}
+
+// Hello, world!
+
+static void Main(string[] args)
+{
+   int x = 89;
+   Console.WriteLine(x);
+}
+
+// 89
+
+╔════════════╗
+║ Dictionary ║
+╚════════════╝
+
+* using - a way to include other namespaces(modules), much like import in python
+
+* namespace - a collection of classes
+* class - contains methods and definitions of your program, typically multiple methods
+* method - a collection of statements that are grouped together to perform an operation, also known as a function
+* public - visibility
+* static - variables and methods that belong to a class instead of a specific instance, allows direct calls on class without objects
+* void - indicates that a method does not return a value
+* main - entry point for the program, much like an init in python
+* int - return type, instance
+* string[] - a sequence of characters
+* argument - a peice of data that is passed into a method or program, also known as a parameter
+
+
+* var - indicates the object will be a variable
+* const - store a value that cannot be changed from their initial assignment
+	- const double x = 3;
+
+* ++x - Prefix - increments the value, and then proceeds with the expression.
+
+int x = 3;
+int y = ++x;
+// x is 4, y is 4
+
+* x++ - Postfix - evaluates the expression and then performs the incrementing.
+
+int x = 3;
+int y = x++;
+// x is 4, y is 3
+
+* switch - statement that provides a more elegant way to test a variable for equality against a list of values
+	- case - represents a value to be checked, followed by a colon
+	- default - code executes when none of the cases match the switch expression
+
+╔════════════════╗
+║ SYSTEM METHODS ║
+╚════════════════╝
+
+* Console.WriteLine() - writes to the console, if it is a string, wrap in quotes, or you can pass through a variables
+the parentheses after the WriteLine method. This is the way to pass data, or arguments, to methods. In our case WriteLine is the method and we pass "Hello World!" to it as an argument. String arguments must be enclosed in quotation marks.
+	- Console.WriteLine("Hello, world!");
+
+* Console.ReadLine() - waits for a user input and then assigns to a variable
+
+* Convert.To() - will convert a variable to a different type
+	- Convert.ToDouble, Convert.ToString, Convert.ToInt32
+	- Convert.ToInt32(Console.ReadLine());
+
+╔═══════════════════╗
+║ LOGICAL OPERATORS ║
+╚═══════════════════╝
+
+&& - and
+|| - or
+!  - not
+?  - The ?: operator works the following way: Exp1 is evaluated. If it is true, then Exp2 is evaluated and becomes the value of the entire expression. If Exp1 is false, then Exp3 is evaluated and its value becomes the value of the expression.
+
+int age = 42;
+string msg;
+msg = (age >= 18) ? "Welcome" : "Sorry";
+Console.WriteLine(msg);
+
+╔═══════════════════╗
+║ Formatted Strings ║
+╚═══════════════════╝
+
+static void Main(string[] args)
+{
+   int x = 10;
+   double y = 20;
+
+   Console.WriteLine("x = {0}; y = {1}", x, y);
+}
+
+// Output: x = 10; y = 20
+
+╔══════════════╗
+║ Conditionals ║
+╚══════════════╝
+
+** IF / ELSE **
+
+if (condition)
+{
+    statement
+}
+else
+{
+    statement
+}
+
+** ELSE IF **
+
+int x = 33;
+
+if (x == 8) {
+   Console.WriteLine("Value of x is 8");
+}
+else if (x == 18) {
+   Console.WriteLine("Value of x is 18");
+}
+else if (x == 33) {
+   Console.WriteLine("Value of x is 33");
+}
+else {
+   Console.WriteLine("No match");
+}
+//Outputs "Value of x is 33"
+
+** NESTED **
+
+int mark = 100;
+
+if (mark >= 50) {
+  Console.WriteLine("You passed.");
+  if (mark == 100) {
+    Console.WriteLine("Perfect!");
+  }
+}
+else {
+  Console.WriteLine("You failed.");
+}
+
+** SWITCH **
+
+int num = 3;
+switch (num)
+{
+  case 1:
+   Console.WriteLine("one");
+   break;
+  case 2:
+   Console.WriteLine("two");
+   break;
+  case 3:
+   Console.WriteLine("three");
+   break;
+}
+//Outputs "three"
+
+int x = 33;
+switch(x) {
+case 8:
+   Console.WriteLine("Value is 8");
+   break;
+case 18:
+   Console.WriteLine("Value is 18");
+   break;
+case 33:
+   Console.WriteLine("Value is 33");
+   break;
+}
+//Output: Value is 33
+
+int age = 88;
+switch (age) {
+  case 16:
+    Console.WriteLine("Too young");
+    break;
+  case 42:
+    Console.WriteLine("Adult");
+    break;
+  case 70:
+    Console.WriteLine("Senior");
+    break;
+  default:
+    Console.WriteLine("The default case");
+    break;
+}
+// Outputs "The default case"
+
+** FOR LOOP **
+
+for ( init; condition; increment ) {
+  statement(s);
+}
+
+** DO-WHILE **
+
+int a = 0;
+do {
+  Console.WriteLine(a);
+  a++;
+} while(a < 5);
