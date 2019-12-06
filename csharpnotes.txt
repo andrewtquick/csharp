@@ -72,6 +72,35 @@ int y = x++;
 	- case - represents a value to be checked, followed by a colon
 	- default - code executes when none of the cases match the switch expression
 
+╔═════════════╗
+║ VALUE TYPES ║
+╚═════════════╝
+
+* bool - Boolean value - True or False
+* byte - 8-bit unsigned integer - 0 to 255
+* char - 16-bit unicode character
+* decimal - 128-bit precise decimal value -
+* double - 64-bit precision floating point - 
+* float = 32-bit precision floating point - 
+* int - 32-bit signed integer - -2,147,483,648 to 2,147,483,647
+* long = 64-bit signed integer - -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
+* sbyte - 8-bit signed integer - -128 to 127
+* short - 16-bit signed integer - -32,768 to 32,767
+* uint - 32-bit unsigned integer - 0 to 4,294,967,295
+* ulong - 64-bit unsigned integer - 0 to 18,446,744,073,709,551,615
+* ushort - 16-bit unsigned integer - 0 to 65,535
+* object - base class for all data types,
+	- object obj; - value type if converted to an object type it is called boxing
+	- obj = 100; - object is converted to a value type it is called unboxing
+* dynamic - store any type of value
+* string - allows you to assign any string values to a variable
+	- quoted - String str = "quoted string"
+	- @quoted - @"quoted string"
+* type* - 
+* char* - 
+* int* - 
+
+
 ╔════════════════╗
 ║ SYSTEM METHODS ║
 ╚════════════════╝
@@ -85,6 +114,27 @@ the parentheses after the WriteLine method. This is the way to pass data, or arg
 * Convert.To() - will convert a variable to a different type
 	- Convert.ToDouble, Convert.ToString, Convert.ToInt32
 	- Convert.ToInt32(Console.ReadLine());
+	
+* sizeof() - expression that yields the storage size of the object of type in bytes
+
+** CONVERSION METHODS **
+
+- ToBoolean - converts a type to a boolean value, where possible
+- ToByte - converts a type to a byte
+- ToChar - converts a type to a single unicode character, where possible
+- ToDateTime - converts a type(integer or string type) to date-time structures
+- ToDecimal - converts a floating point or integer type to a decimal type
+- ToDouble - converts a type to a double
+- ToInt16 - converts a type to a 16-bit integer
+- ToInt32 - converts a type to a 32-bit integer
+- ToInt64 - converts a type to 65-bit integer
+- ToSbyte - converts a type to a signed byte type
+- ToSingle - converts a type to a small floating point
+- ToString - converts a type to string
+- ToType - converts a type to a specific type
+- ToUInt16 - converts a type to an unsigned int type
+- ToUInt32 - converts a type to an unsigned long type
+- ToUInt64 - converts a type to an unsigned big integer
 
 ╔═══════════════════╗
 ║ LOGICAL OPERATORS ║
