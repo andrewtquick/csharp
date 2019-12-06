@@ -1,0 +1,11 @@
+C:\dev\csharp\NumberGuesser\NumberGuesser\bin\Debug\netcoreapp3.0\NumberGuesser.exe
+C:\dev\csharp\NumberGuesser\NumberGuesser\bin\Debug\netcoreapp3.0\NumberGuesser.deps.json
+C:\dev\csharp\NumberGuesser\NumberGuesser\bin\Debug\netcoreapp3.0\NumberGuesser.runtimeconfig.json
+C:\dev\csharp\NumberGuesser\NumberGuesser\bin\Debug\netcoreapp3.0\NumberGuesser.runtimeconfig.dev.json
+C:\dev\csharp\NumberGuesser\NumberGuesser\bin\Debug\netcoreapp3.0\NumberGuesser.dll
+C:\dev\csharp\NumberGuesser\NumberGuesser\bin\Debug\netcoreapp3.0\NumberGuesser.pdb
+C:\dev\csharp\NumberGuesser\NumberGuesser\obj\Debug\netcoreapp3.0\NumberGuesser.csprojAssemblyReference.cache
+C:\dev\csharp\NumberGuesser\NumberGuesser\obj\Debug\netcoreapp3.0\NumberGuesser.AssemblyInfoInputs.cache
+C:\dev\csharp\NumberGuesser\NumberGuesser\obj\Debug\netcoreapp3.0\NumberGuesser.AssemblyInfo.cs
+C:\dev\csharp\NumberGuesser\NumberGuesser\obj\Debug\netcoreapp3.0\NumberGuesser.dll
+C:\dev\csharp\NumberGuesser\NumberGuesser\obj\Debug\netcoreapp3.0\NumberGuesser.pdb

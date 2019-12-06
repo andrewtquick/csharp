@@ -1,0 +1,3 @@
+C:\dev\csharp\aNote\aNote\obj\Debug\aNote.csprojAssemblyReference.cache
+C:\dev\csharp\aNote\aNote\obj\Debug\App.g.cs
+C:\dev\csharp\aNote\aNote\obj\Debug\aNote_MarkupCompile.cache
