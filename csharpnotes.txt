@@ -1,80 +1,41 @@
-
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Practice
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-
-        }
-    }
-}
-
-
-
-static void Main(string[] args)
-{
-    Console.WriteLine("Hello, world!");
-}
-
-// Hello, world!
-
-static void Main(string[] args)
-{
-   int x = 89;
-   Console.WriteLine(x);
-}
-
-// 89
-
-╔════════════╗
-║ Dictionary ║
-╚════════════╝
+╔═══════════════════╗
+║      GLOSSARY     ║
+╚═══════════════════╝
 
 * using - a way to include other namespaces(modules), much like import in python
 
 * namespace - a collection of classes
 * class - contains methods and definitions of your program, typically multiple methods
 * method - a collection of statements that are grouped together to perform an operation, also known as a function
-* public - visibility
+* public - visibility - allows any part of the program in the same assembly or another assembly to access the type and its members
+* private - restricts other parts of the program from accessing the type and its members, only code in the same class or struct can access it
 * static - variables and methods that belong to a class instead of a specific instance, allows direct calls on class without objects
+* internal - allows other program code in the same assembly to accesss the type or its members, default access if no modifier is specified
+* protected - allows codes in the same class or a class that derives from that class to access the type or its members
 * void - indicates that a method does not return a value
 * main - entry point for the program, much like an init in python
 * int - return type, instance
 * string[] - a sequence of characters
+* int[] - a sequence of integers
+* List<int> - a list of integers
 * argument - a peice of data that is passed into a method or program, also known as a parameter
 
 
-* var - indicates the object will be a variable
+* var - indicates the object will be a variable - can be an integer or a string
 * const - store a value that cannot be changed from their initial assignment
-	- const double x = 3;
 
 * ++x - Prefix - increments the value, and then proceeds with the expression.
 
-int x = 3;
-int y = ++x;
-// x is 4, y is 4
-
 * x++ - Postfix - evaluates the expression and then performs the incrementing.
 
-int x = 3;
-int y = x++;
-// x is 4, y is 3
 
 * switch - statement that provides a more elegant way to test a variable for equality against a list of values
 	- case - represents a value to be checked, followed by a colon
 	- default - code executes when none of the cases match the switch expression
 
-╔═════════════╗
-║ VALUE TYPES ║
-╚═════════════╝
+╔═══════════════════╗
+║    VALUE TYPES    ║
+╚═══════════════════╝
 
 * bool - Boolean value - True or False
 * byte - 8-bit unsigned integer - 0 to 255
@@ -89,6 +50,8 @@ int y = x++;
 * uint - 32-bit unsigned integer - 0 to 4,294,967,295
 * ulong - 64-bit unsigned integer - 0 to 18,446,744,073,709,551,615
 * ushort - 16-bit unsigned integer - 0 to 65,535
+* enum -
+* struct
 * object - base class for all data types,
 	- object obj; - value type if converted to an object type it is called boxing
 	- obj = 100; - object is converted to a value type it is called unboxing
@@ -100,10 +63,191 @@ int y = x++;
 * char* - 
 * int* - 
 
+Modifiers
 
-╔════════════════╗
-║ SYSTEM METHODS ║
-╚════════════════╝
+abstract
+async
+const
+event
+extern
+new
+override
+partial
+readonly
+sealed
+static
+unsafe
+virtual
+volatile
+
+
+╔═══════════════════╗
+║       ARRAYS      ║
+╚═══════════════════╝
+
+int[] nums = { 1, 2, 3, 4, 5 };
+string[] fruits = {"apple","banana","orange"};
+
+// Empty Array
+int[] nums = new int[10];
+
+// Multidimensional Array
+int[,] matrix = new int[2,2];
+
+matrix[0,0] = 1;
+matrix[0,1] = 2;
+matrix[1,0] = 3;
+matrix[1,1] = 4;
+
+int[,] predefinedMatrix = new int[2,2] { { 1, 2 }, { 3, 4 } };
+
+╔═══════════════════╗
+║       LISTS       ║
+╚═══════════════════╝
+
+The difference between a list and an array is that lists are dynamic sized, while arrays have a fixed size. When you do not know the amount of variables your array should hold, use a list instead.
+
+List<int> numbers = new List<int>();
+numbers.Add(1);
+numbers.Add(2);
+numbers.Add(3);
+
+// Add entire array to a list
+List<int> numbers = new List<int>();
+int[] array = new int[] { 1, 2, 3 };
+numbers.AddRange(array);
+
+List<string> fruits = new List<string>();
+// add fruits
+fruits.Add("apple");
+fruits.Add("banana");
+fruits.Add("orange");
+
+// now remove the banana
+fruits.Remove("banana");
+Console.WriteLine(fruits.Count);
+
+We can also use RemoveAt to specify an index of an item to remove. In our case, to remove the banana, we will use the index 1.
+
+List<string> fruits = new List<string>();
+// add fruits
+fruits.Add("apple");
+fruits.Add("banana");
+fruits.Add("orange");
+
+// now remove the banana
+fruits.RemoveAt(1);
+Console.WriteLine(fruits.Count);
+
+We can use AddRange to join between lists.
+
+List<string> food = new List<string>();
+food.Add("apple");
+food.Add("banana");
+
+List<string> vegetables = new List<string>();
+vegetables.Add("tomato");
+vegetables.Add("carrot");
+
+food.AddRange(vegetables);
+Console.WriteLine(food.Count);
+
+using System;
+using System.Collections.Generic;
+
+public class Hello
+{
+    public static void Main()
+    {
+        // TODO: add your code here
+		List<int> primeNumbers = new List<int>();
+        primeNumbers.Add(2);
+        primeNumbers.Add(3);
+        primeNumbers.Add(5);
+        primeNumbers.Add(7);
+        primeNumbers.Add(11);
+        // test code
+    }
+}
+
+╔═══════════════════╗
+║    DICTIONARIES   ║
+╚═══════════════════╝
+
+Dictionary<string, long> phonebook = new Dictionary<string, long>();
+phonebook.Add("Alex", 4154346543);
+phonebook["Jessica"] = 4159484588;
+
+using System;
+using System.Collections.Generic;
+
+public class Hello
+{
+    public static void Main()
+    {
+        // TODO: add the inventory dictionary here
+        Dictionary<string, int> inventory = new Dictionary<string, int>();
+        inventory.Add("apple", 3);
+        inventory.Add("orange", 5);
+        inventory.Add("banana", 2);
+
+        Console.WriteLine(inventory["apple"]);
+        Console.WriteLine(inventory["orange"]);
+        Console.WriteLine(inventory["banana"]);
+		
+		inventory.Remove("apple"); // remove item by dictionary name
+
+    }
+}
+
+
+╔═══════════════════╗
+║    FORMATTING     ║
+╚═══════════════════╝
+
+int x = 1, y = 2;
+int sum = x + y;
+string sumCalculation = String.Format("{0} + {1} = {2}", x, y, sum);
+Console.WriteLine(sumCalculation);
+
+using System;
+
+public class Hello
+{
+    public static void Main()
+    {
+        string firstName = "John";
+        string lastName = "Doe";
+        int age = 27;
+
+        string sentence = String.Format("{0} {1} is {2} years old.", firstName, lastName, age);
+
+        Console.WriteLine(sentence);
+
+    }
+}
+
+using System;
+
+public class Hello
+{
+    public static void Main()
+    {
+        string firstName = "John";
+        string lastName = "Doe";
+        int age = 27;
+
+        // TODO: change this
+        string sentence = $"{firstName} {lastName} is {age} years old.";
+
+        Console.WriteLine(sentence);
+
+    }
+}
+
+╔═══════════════════╗
+║   SYSTEM METHODS  ║
+╚═══════════════════╝
 
 * Console.WriteLine() - writes to the console, if it is a string, wrap in quotes, or you can pass through a variables
 the parentheses after the WriteLine method. This is the way to pass data, or arguments, to methods. In our case WriteLine is the method and we pass "Hello World!" to it as an argument. String arguments must be enclosed in quotation marks.
@@ -150,23 +294,10 @@ string msg;
 msg = (age >= 18) ? "Welcome" : "Sorry";
 Console.WriteLine(msg);
 
+
 ╔═══════════════════╗
-║ Formatted Strings ║
+║    CONDITIONALS   ║
 ╚═══════════════════╝
-
-static void Main(string[] args)
-{
-   int x = 10;
-   double y = 20;
-
-   Console.WriteLine("x = {0}; y = {1}", x, y);
-}
-
-// Output: x = 10; y = 20
-
-╔══════════════╗
-║ Conditionals ║
-╚══════════════╝
 
 ** IF / ELSE **
 
@@ -259,16 +390,164 @@ switch (age) {
 }
 // Outputs "The default case"
 
-** FOR LOOP **
+╔═══════════════════╗
+║     FOR LOOPS     ║
+╚═══════════════════╝
 
-for ( init; condition; increment ) {
-  statement(s);
+for( [variable to count iterations] ; [conditions checked for] ; [code to execute every loop])
+
+int i;
+
+for( i = 0; i < 10; i++)
+OR
+for( int i = 0; i < 10; i++)
+	
+
+public class Functions
+{
+    public static void Main()
+    {
+        string x = "Hi";
+       
+        // write for loop here
+        for(int n = 0; n < 10; n++)
+        {
+            Console.WriteLine(x);
+        }
+		
+		string x = "Hi";
+        int n = 10;
+
+        for( int i = 0; i < n; i++)
+        {
+            Console.WriteLine(x);
+        }
+    }
+
 }
 
-** DO-WHILE **
+╔═══════════════════╗
+║    WHILE LOOPS    ║
+╚═══════════════════╝
 
-int a = 0;
-do {
-  Console.WriteLine(a);
-  a++;
-} while(a < 5);
+while([conditions to be checked])
+{
+[Code to execute]
+}
+
+int n = 0;
+
+while( n == 0)
+{
+    Console.WriteLine("N is 0");
+    n++;
+}
+
+
+public class Functions
+{
+    public static void Main()
+    {
+        string x = "Hi";
+        int n = 10;
+        int i = 0;
+
+        //write while loop here
+
+        while(i < n)
+        {
+            Console.WriteLine(x);
+            i++;
+        }
+    }
+
+}
+
+╔═══════════════════╗
+║      METHODS      ║
+╚═══════════════════╝
+
+[Modifiers (E.G public or static)] [Type of output] [Name] ( [parameter 1],[parameter 2] ...)
+{
+
+}
+
+using System;
+
+public class Methods
+{
+    public static void Main()
+    {
+
+        int x = 2;
+        int y = 2;
+        int a = foo(x, y);
+        Console.WriteLine(a);
+
+    }
+
+    //write method foo here
+    public static int foo(int x, int y)
+    {
+        return x / y;
+    }
+}
+
+
+╔═══════════════════╗
+║      CLASSES      ║
+╚═══════════════════╝
+
+
+using System;
+class car{
+    public int numTires = 4;
+    public int year = 2000;
+    public bool runs = true;
+}
+public class MainClass{
+    public static void Main(){
+        car car1 = new car();
+        car car2 = new car();
+        car car3 = new car();
+        // Test code
+        Console.WriteLine(car1.numTires);
+        Console.WriteLine(car2.year);
+        Console.WriteLine(car3.runs);
+    }
+}
+
+
+public class MainClass
+{
+    class Vehicle
+    {	// Class properties
+        public string Type;
+        public int NumTires;
+        public int Year;
+        public bool Runs;
+		
+		// Init class properties
+        public Vehicle(string type, int numTires, int year, bool runs)
+        {
+            Type = type;
+            NumTires = numTires;
+            Year = year;
+            Runs = runs;
+
+        }
+    }
+
+    public static void Main()
+    {
+        //Create vehicles here
+        Vehicle car = new Vehicle("car", 4, 2000, true);
+        Vehicle oldcar = new Vehicle("oldcar", 4, 1980, false);
+        Vehicle bike = new Vehicle("bike", 2, 2017, true);
+
+        // Test code
+        Console.WriteLine(car.Type);
+        Console.WriteLine(oldcar.Runs);
+        Console.WriteLine(bike.NumTires);
+    }
+}
